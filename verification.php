@@ -16,14 +16,15 @@ session_start();
             $pass = $pass -> get('password');
 
             foreach($users as $data) {
-                if($email == $data['email'] && $pass == $data['password']){
+                if($email == $data['email'] && $pass == $data['password']){ 
+                    $user = new user();
                     $user->setName($data['name']);
                     $user->setCpf($data['cpf']);
                     $user->setEmail($data['email']);
                     $user->setPassword($data['password']);
                 }
             }
-            else ()
+            
         }
     ?>
 </body>
