@@ -17,7 +17,7 @@ session_start();
 
             foreach($users as $data) {
                 if($email == $data['email'] && $pass == $data['password']){ 
-                    $user = new user();
+                    $user = new User();
                     $user->setName($data['name']);
                     $user->setCpf($data['cpf']);
                     $user->setEmail($data['email']);
